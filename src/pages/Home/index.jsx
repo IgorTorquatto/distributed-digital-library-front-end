@@ -4,7 +4,8 @@ export const Home = () => {
 
   return (
     <>
-    <h1 className={styles.titulo}>home</h1>    
+    <h1 className={styles.titulo}>home</h1>   
+    <p>teste branch igor</p> 
     </>
   );
   
