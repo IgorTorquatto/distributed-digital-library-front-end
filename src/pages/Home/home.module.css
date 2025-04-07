@@ -1,3 +1,52 @@
-.titulo{
-    color: red;
+.topBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+}
+
+.imgLogo{
+
+    width: 200x;
+    height: 100px;
+}
+
+.menu{
+    background-color: #5885C8;
+    height: 86px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.menuBox{
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.contentPage{
+    background-color: #D9D9D9;
+    padding: 20px;
+}
+
+.section{
+    margin-top: 20px;
+}
+
+.sectionTitle{
+    color: #464646;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sectionShowCase{
+    background-color: #ffffff;
+    height: 371px;
+    border-radius: 20px;
 }
