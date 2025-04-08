@@ -1,0 +1,79 @@
+.topBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 120px;
+}
+
+.imgLogo{
+
+    width: 200x;
+    height: 100px;
+}
+
+.menu{
+    background-color: #5885C8;
+    height: 86px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.menuBox{
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.contentPage{
+    background-color: #D9D9D9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.section{
+    margin-top: 20px;
+}
+
+.sectionTitle{
+    color: #000000;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.bookRegistration{
+    background-color: #ffffff;
+    height: 718px;
+    width: 98%;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.linksNavigationBox{
+    height: 29px;
+    width: 323px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.linksNavigation{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5885C8;
+}
+
+.bookRegistrationTitle{
+    display: flex;
+    justify-content: center;
+}
