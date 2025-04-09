@@ -1,9 +1,7 @@
 import styles from "./home.module.css";
 import Logo from "../../assets/Nubi Logo.png";
-import LivIcon from "../../assets/Liv icon.png";
-import ExploreIcon from "../../assets/Explore Icon.png";
-import CadastrarIcon from "../../assets/Cadastrar Icon.png";
 import SearchInput from "../../components/SearchInput/SearchInput";
+import { Books, Binoculars, PlusCircle   } from "phosphor-react";
 
 export const Home = () => {
   return (
@@ -16,21 +14,21 @@ export const Home = () => {
       </div>
       <div className={styles.menu}>
         <div className={styles.genresBox}>
-          <div>
-            <img className={styles.menuIcon} src={LivIcon}></img>
-          </div>
+          <span>
+              <Books size={32} className={styles.menuIcon} />
+          </span>
           Todos os gêneros
         </div>
         <div className={styles.exploreBox}>
-          <div>
-            <img className={styles.menuIcon} src={ExploreIcon}></img>
-          </div>
+          <span>
+              <Binoculars  size={32} className={styles.menuIcon} />
+          </span>
           Explorar
         </div>
         <div className={styles.registerBox}>
-          <div>
-            <img  className={styles.menuIcon} src={CadastrarIcon}></img>
-          </div>
+          <span>
+              <PlusCircle  size={32} className={styles.menuIcon} />
+          </span>
           Cadastrar Livro
         </div>
       </div>
