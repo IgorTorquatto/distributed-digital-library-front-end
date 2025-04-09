@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 import styles from "./addBook.module.css";
 import Logo from "../../assets/Nubi Logo.png";
-import LivIcon from "../../assets/Liv icon.png";
-import ExploreIcon from "../../assets/Explore Icon.png";
-import CadastrarIcon from "../../assets/Cadastrar Icon.png";
 import { CaretRight } from "phosphor-react";
 import Art from "../../assets/Art.png";
+import SearchInput from "../../components/SearchInput/SearchInput";
+import { Books, Binoculars, PlusCircle   } from "phosphor-react";
 
 export const AddBook = () => {
   return (
@@ -14,40 +13,41 @@ export const AddBook = () => {
         <div>
           <img src={Logo} className={styles.imgLogo}></img>
         </div>
+        <SearchInput />
       </div>
       <div className={styles.menu}>
-        <div className={styles.menuBox}>
-          <div>
-            <img src={LivIcon}></img>
-          </div>
+        <div className={styles.genresBox}>
+          <span>
+              <Books size={32} className={styles.menuIcon} />
+          </span>
           Todos os gêneros
         </div>
-        <div className={styles.menuBox}>
-          <div>
-            <img src={ExploreIcon}></img>
-          </div>
+        <div className={styles.exploreBox}>
+          <span>
+              <Binoculars  size={32} className={styles.menuIcon} />
+          </span>
           Explorar
         </div>
-        <div className={styles.menuBox}>
-          <div>
-            <img src={CadastrarIcon}></img>
-          </div>
+        <div className={styles.registerBox}>
+          <span>
+              <PlusCircle  size={32} className={styles.menuIcon} />
+          </span>
           Cadastrar Livro
         </div>
       </div>
       <div className={styles.contentPage}>
         <div className={styles.linksNavigationBox}>
           <Link to="/home" className={styles.linksNavigation}>Home</Link>
-          <CaretRight size={28} />
+          <span>
+            <CaretRight size={28} weight="bold" color="#848484"/>
+          </span>
           <Link to="/addBook"  className={styles.linksNavigation}>Cadastrar Livro</Link>
         </div>
         <div className={styles.bookRegistration}>
-           <div>
-            <img src={Art}></img>
-           </div>
-            <div className={styles.bookRegistrationTitle}>
-                <h1 className={styles.sectionTitle}>Cadastro de Livro</h1>
-            </div>
+          <img src={Art} className={styles.artImage} />
+          <div className={styles.bookRegistrationTitle}>
+            <h1 className={styles.sectionTitle}>Cadastro de Livro</h1>
+          </div>
         </div>
       </div>
     </>
