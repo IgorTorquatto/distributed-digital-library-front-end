@@ -46,15 +46,21 @@
     color: #000000;
     font-size: 32px;
     font-weight: bold;
+    margin: 0 auto;
 }
 
-.bookRegistration{
+.sectionParagraph{
+   
+}
+
+.bookRegistrationOne{
     background-color: #ffffff;
     height: 718px;
     width: 98%;
     border-radius: 20px;
     margin: 0 auto;
     padding: 40px;
+    display: flex;
 }
 
 .linksNavigationBox{
@@ -73,7 +79,16 @@
     color: #5885C8;
 }
 
-.bookRegistrationTitle{
+.imgArt{
+    height: 650px;
+}
+
+.bookRegistrationTwo{
+    background-color: #ffffff;
+    height: 718px;
+    width: 98%;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 40px;
     display: flex;
-    justify-content: center;
 }

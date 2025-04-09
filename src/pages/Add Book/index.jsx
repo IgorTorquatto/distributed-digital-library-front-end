@@ -41,13 +41,19 @@ export const AddBook = () => {
           <CaretRight size={28} />
           <Link to="/addBook"  className={styles.linksNavigation}>Cadastrar Livro</Link>
         </div>
-        <div className={styles.bookRegistration}>
+        <div className={styles.bookRegistrationOne}>
            <div>
-            <img src={Art}></img>
+            <img src={Art} className={styles.imgArt}></img>
            </div>
-            <div className={styles.bookRegistrationTitle}>
-                <h1 className={styles.sectionTitle}>Cadastro de Livro</h1>
-            </div>
+           <h1 className={styles.sectionTitle}>Cadastro de Livros</h1>
+        </div>
+
+        <div className={styles.bookRegistrationTwo}>
+          <h1 className={styles.sectionTitle}>Descrição</h1>
+          <p className={styles.sectionParagraph}>Forneça um resumo conciso do conteúdo do livro, abordando seu tema principal, sinopse e outros aspectos relevantes.</p>
+           <div>
+            <img src={Art} className={styles.imgArt}></img>
+           </div>
         </div>
       </div>
     </>
