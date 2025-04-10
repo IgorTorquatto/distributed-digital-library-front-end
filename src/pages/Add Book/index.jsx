@@ -3,18 +3,22 @@ import styles from "./addBook.module.css";
 import Logo from "../../assets/Nubi Logo.png";
 import { CaretRight } from "phosphor-react";
 import Art from "../../assets/Art.png";
+import ArtTwo from "../../assets/ArtTwo.png";
+import BlueArrow from "../../assets/Blue Arrow.png";
 import SearchInput from "../../components/SearchInput/SearchInput";
 import { Books, Binoculars, PlusCircle } from "phosphor-react";
 
 export const AddBook = () => {
   return (
     <>
+
       <div className={styles.topBox}>
         <div>
           <img src={Logo} className={styles.imgLogo}></img>
         </div>
         <SearchInput />
       </div>
+
       <div className={styles.menu}>
         <div className={styles.genresBox}>
           <span>
@@ -35,7 +39,9 @@ export const AddBook = () => {
           Cadastrar Livro
         </div>
       </div>
+
       <div className={styles.contentPage}>
+
         <div className={styles.linksNavigationBox}>
           <Link to="/home" className={styles.linksNavigation}>
             Home
@@ -92,6 +98,28 @@ export const AddBook = () => {
             </div>
           </div>
         </div>
+
+        <div className={styles.bookRegistrationTwo}>
+
+          <div>
+            <h2 className={styles.sectionTitle}>Descrição</h2>
+            <p>Forneça um resumo conciso do conteúdo do livro, abordando seu tema principal, sinopse e outros aspectos relevantes.</p>
+            <div className={styles.inputGroup}>
+                <input type="text" className={styles.inputDescription} />
+            </div>
+          </div>
+          
+          <div>
+            <div className={styles.artTwo}>
+            <img src={ArtTwo} className={styles.artImage}></img>
+            </div>
+            <div className={styles.artTwo}>
+            <img src={BlueArrow} className={styles.blueArrow}></img>
+            </div>
+          </div>
+          
+        </div>
+
       </div>
     </>
   );
