@@ -3,10 +3,11 @@ import styles from "./addBook.module.css";
 import Logo from "../../assets/Nubi Logo.png";
 import { CaretRight } from "phosphor-react";
 import Art from "../../assets/Art.png";
-import ArtTwo from "../../assets/ArtTwo.png";
-import BlueArrow from "../../assets/Blue Arrow.png";
+import ArtTwo from "../../assets/foto unica.png";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import { Books, Binoculars, PlusCircle } from "phosphor-react";
+import { Button } from "../../components/Button/Button";
+import { Menu } from "../../components/Menu/Menu";
+import { Footer } from "../../components/Footer/Footer";
 
 export const AddBook = () => {
   return (
@@ -19,26 +20,7 @@ export const AddBook = () => {
         <SearchInput />
       </div>
 
-      <div className={styles.menu}>
-        <div className={styles.genresBox}>
-          <span>
-            <Books size={32} className={styles.menuIcon} />
-          </span>
-          Todos os gêneros
-        </div>
-        <div className={styles.exploreBox}>
-          <span>
-            <Binoculars size={32} className={styles.menuIcon} />
-          </span>
-          Explorar
-        </div>
-        <div className={styles.registerBox}>
-          <span>
-            <PlusCircle size={32} className={styles.menuIcon} />
-          </span>
-          Cadastrar Livro
-        </div>
-      </div>
+      <Menu/>
 
       <div className={styles.contentPage}>
 
@@ -99,28 +81,38 @@ export const AddBook = () => {
           </div>
         </div>
 
-        <div className={styles.bookRegistrationTwo}>
+        <div className={styles.sectionTwo}>
 
-          <div>
-            <h2 className={styles.sectionTitle}>Descrição</h2>
-            <p>Forneça um resumo conciso do conteúdo do livro, abordando seu tema principal, sinopse e outros aspectos relevantes.</p>
-            <div className={styles.inputGroup}>
-                <input type="text" className={styles.inputDescription} />
-            </div>
-          </div>
+            <div className={styles.bookRegistrationTwo}>
+
+              <div>
+                <h2 className={styles.sectionTitle}>Descrição</h2>
+                <p>Forneça um resumo conciso do conteúdo do livro, abordando seu tema principal, sinopse e outros aspectos relevantes.</p>
+                <div className={styles.inputGroup}>
+                    <input type="text" className={styles.inputDescription} />
+                </div>
+              </div>
+              
+              <div>
+                <div className={styles.artTwo}>
+                <img src={ArtTwo} className={styles.artImage}></img>
+                </div>
+              </div>
           
-          <div>
-            <div className={styles.artTwo}>
-            <img src={ArtTwo} className={styles.artImage}></img>
             </div>
-            <div className={styles.artTwo}>
-            <img src={BlueArrow} className={styles.blueArrow}></img>
+
+            <div className={styles.registerButton}>
+              <Button>Cadastrar</Button>
             </div>
-          </div>
-          
+
         </div>
 
       </div>
+
+      <div>
+          <Footer/>
+      </div>
+      
     </>
   );
 };
