@@ -5,9 +5,9 @@ import { CaretRight } from "phosphor-react";
 import Art from "../../assets/Art.png";
 import ArtTwo from "../../assets/foto unica.png";
 import SearchInput from "../../components/SearchInput/SearchInput";
-import { Books, Binoculars, PlusCircle, ChartPieSlice } from "phosphor-react";
 import { Button } from "../../components/Button/Button";
 import { Menu } from "../../components/Menu/Menu";
+import { Footer } from "../../components/Footer/Footer";
 
 export const AddBook = () => {
   return (
@@ -108,6 +108,11 @@ export const AddBook = () => {
         </div>
 
       </div>
+
+      <div>
+          <Footer/>
+      </div>
+      
     </>
   );
 };
