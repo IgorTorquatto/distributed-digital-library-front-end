@@ -1,24 +1,19 @@
 import { Link } from "react-router-dom";
 import styles from "./addBook.module.css";
-import Logo from "../../assets/Nubi Logo.png";
 import { CaretRight } from "phosphor-react";
 import Art from "../../assets/Art.png";
 import ArtTwo from "../../assets/foto unica.png";
-import SearchInput from "../../components/SearchInput/SearchInput";
 import { Button } from "../../components/Button/Button";
 import { Menu } from "../../components/Menu/Menu";
 import { Footer } from "../../components/Footer/Footer";
+import { Upload } from "phosphor-react";
+import { Header } from "../../components/Header/Header";
 
 export const AddBook = () => {
   return (
     <>
 
-      <div className={styles.topBox}>
-        <div>
-          <img src={Logo} className={styles.imgLogo}></img>
-        </div>
-        <SearchInput />
-      </div>
+      <Header showSearch={true}/>
 
       <Menu/>
 
@@ -76,6 +71,10 @@ export const AddBook = () => {
               </div>
               <div className={styles.inputGroup}>
                 <label>Capa</label>
+                <div className={styles.uploadButton}>
+                   Escolher arquivo 
+                   <span> <Upload size={32} /></span>
+                </div>
               </div>
             </div>
           </div>
