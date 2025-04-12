@@ -1,0 +1,17 @@
+/* Button.module.css */
+.button {
+  background-color: #ffffff;
+  border: 1px solid #5885C8;
+  color: #5885C8;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 300px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+
+}
