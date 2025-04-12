@@ -9,3 +9,49 @@
   height: 110px;
   margin-left: 20px;
 }
+
+.userBox{
+  width: 450px;
+  height: 116px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.userInfos{
+  width: 500px;
+  height: 100px;
+  border-left: 5px solid #E4EFFF;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  gap: 40px; 
+}
+
+.userTxts{
+  line-height: 10px;
+  color: #06284B;
+}
+
+.userTxts p:nth-child(1){
+  font-weight: bolder;
+}
+
+.imgUser{
+  height: 80px;
+  width: 80px;
+}
+
+.shoppingCart{
+  height: 80px;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 5px solid #E4EFFF;
+  cursor: pointer;
+}
