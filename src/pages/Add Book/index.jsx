@@ -26,6 +26,12 @@ export const AddBook = () => {
           <span>
             <CaretRight size={28} weight="bold" color="#848484" />
           </span>
+          <Link to="/home" className={styles.linksNavigation}>
+            Administração
+          </Link>
+          <span>
+            <CaretRight size={28} weight="bold" color="#848484" />
+          </span>
           <Link to="/addBook" className={styles.linksNavigation}>
             Cadastrar Livro
           </Link>

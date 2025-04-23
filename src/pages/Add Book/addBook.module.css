@@ -13,7 +13,7 @@
 
 .linksNavigationBox {
   height: 29px;
-  width: 323px;
+  width: auto;
   display: flex;
   align-items: center;
   flex-direction: row;

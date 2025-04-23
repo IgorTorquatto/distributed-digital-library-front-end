@@ -4,17 +4,28 @@ import Logo from "../../assets/Nubi Logo.png";
 import SearchInput from "../SearchInput/SearchInput";
 import UserImage from "../../assets/Mask group.png";
 import { ShoppingCart } from "phosphor-react";
+import { useState } from "react";
+import LogoFocused from "../../assets/Nubi Focused.png";
 
 export const Header = ( { showSearch = false }) => {
+
+  const [ searchFocused, setSearchFocused ] = useState(false);
+
   return (
     <>
       <div className={styles.header}>
 
-        <div>
-          <img src={Logo} className={styles.imgLogo}></img>
+        <div className={styles.boxLogo}>
+          <img src={searchFocused ? LogoFocused : Logo} className={`${styles.imgLogo} ${styles.logoTransition}`}></img>
         </div>
 
-        {showSearch && <SearchInput/>}
+        {showSearch && (
+        <SearchInput
+          onFocus={() => setSearchFocused(true)}
+          onBlur={() => setSearchFocused(false)}
+          isFocused = {searchFocused}
+        />
+      )}
 
         <div className={styles.userBox}>
 
