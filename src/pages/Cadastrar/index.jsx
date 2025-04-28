@@ -79,7 +79,7 @@ export const Cadastrar = () => {
         <div className={styles.rightSection}> 
 
             <div className={styles.linksNavigationBox}>
-              <Link to="/home" className={styles.linksNavigation}>
+              <Link to="/inicio" className={styles.linksNavigation}>
                 Home
               </Link>
               <span>
