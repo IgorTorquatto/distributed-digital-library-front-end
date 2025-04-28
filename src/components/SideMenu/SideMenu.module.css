@@ -1,0 +1,38 @@
+.sideMenu{
+    background-color: #5885C8;
+    width: 250px;
+}
+
+.sideMenuItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    font-size: 18px;
+    color: #A1BFEC;
+}
+
+.sideMenuItem:nth-child(1){
+    padding: 20px 20px 0px 20px;
+    margin-bottom: 0px;
+}
+
+.sideMenuItem:hover{
+    color: #ffffff;
+}
+
+.sideMenuLine{
+    width: 200px;
+    color: #ffffff;
+    display: flex;
+    justify-self: center;
+}
+
+.sideMenuSubTitle{
+    color: #A1BFEC;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+}

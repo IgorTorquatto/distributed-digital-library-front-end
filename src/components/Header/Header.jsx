@@ -19,13 +19,16 @@ export const Header = ( { showSearch = false }) => {
           <img src={searchFocused ? LogoFocused : Logo} className={`${styles.imgLogo} ${styles.logoTransition}`}></img>
         </div>
 
-        {showSearch && (
-        <SearchInput
-          onFocus={() => setSearchFocused(true)}
-          onBlur={() => setSearchFocused(false)}
-          isFocused = {searchFocused}
-        />
-      )}
+        {showSearch ? (
+          <SearchInput
+            onFocus={() => setSearchFocused(true)}
+            onBlur={() => setSearchFocused(false)}
+            isFocused={searchFocused}
+          />
+          ) : (
+          <div className={styles.placeholder}></div>
+        )}
+
 
         <div className={styles.userBox}>
 

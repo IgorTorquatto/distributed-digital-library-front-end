@@ -2,7 +2,8 @@ import { Routes,Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Register } from './pages/Register';
 import { Login } from './pages/Login';
-import { AddBook } from './pages/Add Book';
+import { Cadastrar } from './pages/Cadastrar';
+import { Teste } from './pages/Teste';
 
 export const Router = () =>{
     return(
@@ -10,7 +11,8 @@ export const Router = () =>{
             <Route path='/' element={<Login/>}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/register' element={<Register/>}/>
-            <Route path='/addBook' element={<AddBook/>}/>
+            <Route path='/cadastrar' element={<Cadastrar/>}/>
+            <Route path='/teste' element={<Teste/>}/>
         </Routes>
     )
 }
