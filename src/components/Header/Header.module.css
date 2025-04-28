@@ -3,6 +3,19 @@
   flex-direction: row;
   align-items: center;
   height: 120px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.header::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px; 
+  background-color: #1E1E1E;
+  filter: blur(1px); 
 }
 
 .imgLogo {
@@ -16,7 +29,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 40px;
 }
 
 .userInfos{
@@ -54,6 +66,7 @@
   border-radius: 50%;
   border: 5px solid #E4EFFF;
   cursor: pointer;
+  margin-right: 30px;
 }
 
 .logoTransition {
@@ -62,4 +75,10 @@
 
 .boxLogo{
   width: 200px;
+}
+
+.placeholder{
+  width: 100%;
+  max-width: 500px;
+  visibility: hidden;
 }

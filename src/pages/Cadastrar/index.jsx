@@ -4,7 +4,7 @@ import { CaretRight } from "phosphor-react";
 import Art from "../../assets/Art.png";
 import ArtTwo from "../../assets/foto unica.png";
 import { Button } from "../../components/Button/Button";
-import { Menu } from "../../components/Menu/Menu";
+import { SideMenu } from "../../components/SideMenu/SideMenu";
 import { Footer } from "../../components/Footer/Footer";
 import { Upload } from "phosphor-react";
 import { Header } from "../../components/Header/Header";
@@ -23,7 +23,7 @@ const predefinedGenres = [
   'Mistério'
 ].sort((a, b) => a.localeCompare(b));
 
-export const AddBook = () => {
+export const Cadastrar = () => {
   const [tags, setTags] = useState([]); // Para armazenar os gêneros selecionados
   const [inputValue, setInputValue] = useState(''); // Para armazenar o valor do campo de entrada
   const [filteredGenres, setFilteredGenres] = useState(predefinedGenres); // Gêneros filtrados para sugestões
@@ -70,29 +70,33 @@ export const AddBook = () => {
 
   return (
     <>
-      <Header showSearch={true} />
-      <Menu />
+      <Header showSearch={false} />
 
       <div className={styles.contentPage}>
-        <div className={styles.linksNavigationBox}>
-          <Link to="/home" className={styles.linksNavigation}>
-            Home
-          </Link>
-          <span>
-            <CaretRight size={28} weight="bold" color="#848484" />
-          </span>
-          <Link to="/home" className={styles.linksNavigation}>
-            Administração
-          </Link>
-          <span>
-            <CaretRight size={28} weight="bold" color="#848484" />
-          </span>
-          <Link to="/addBook" className={styles.linksNavigation}>
-            Cadastrar Livro
-          </Link>
-        </div>
 
-        <div className={styles.bookRegistration}>
+        <SideMenu/>
+
+        <div className={styles.rightSection}> 
+
+            <div className={styles.linksNavigationBox}>
+              <Link to="/home" className={styles.linksNavigation}>
+                Home
+              </Link>
+              <span>
+                <CaretRight size={28} weight="bold" color="#848484" />
+              </span>
+              <Link to="/home" className={styles.linksNavigation}>
+                Livros
+              </Link>
+              <span>
+                <CaretRight size={28} weight="bold" color="#848484" />
+              </span>
+              <Link to="/cadastrar" className={styles.linksNavigation}>
+                Cadastrar
+              </Link>
+            </div>
+
+            <div className={styles.bookRegistration}>
           <div className={styles.columnOne}>
               <img src={Art} className={`${styles.artImage} ${styles.artImageOne}`} alt="Capa do Livro" />
           </div>
@@ -117,6 +121,17 @@ export const AddBook = () => {
                   <input type="text" className={styles.inputLanguage} />
                 </div>
               </div>
+              <div className={styles.rowGroup}>
+                <div className={styles.inputGroup}>
+                  <label>Editora</label>
+                  <input type="text" />
+                </div>
+                <div className={styles.inputGroup}>
+                <label>Publicado em</label>
+                <input type="number" className={styles.inputPages} />
+              </div>
+                
+              </div>
               <div className={styles.inputGroup}>
                 <label>Gêneros</label>
                 <div className={styles.inputWrapper}>
@@ -139,7 +154,7 @@ export const AddBook = () => {
                   
                   </div>
 
-                {/*<div className={styles.suggestionsSubttile}>Sugestões</div>
+                <div className={styles.suggestionsSubttile}>Sugestões</div>
                 <div className={styles.suggestions}>
                   {filteredGenres.length > 0 && (
                     <ul>
@@ -150,7 +165,7 @@ export const AddBook = () => {
                       ))}
                     </ul>
                   )}
-                </div>*/}
+                </div>
               </div>
             </div>
           </div>
@@ -159,10 +174,6 @@ export const AddBook = () => {
               Título da Coluna 3
             </h1>
             <div className={styles.inputsContainer}>
-              <div className={styles.inputGroup}>
-                <label>Publicado em</label>
-                <input type="number" className={styles.inputPages} />
-              </div>
               <div className={styles.inputGroup}>
                 <label>Capa</label>
                 <div className={styles.uploadButton}>
@@ -177,34 +188,38 @@ export const AddBook = () => {
         </div>
 
         <div className={styles.sectionTwo}>
-          <div className={styles.bookRegistrationTwo}>
-            <div>
-              <h2 className={styles.sectionTitle}>Descrição</h2>
-              <p>
-                Forneça um resumo conciso do conteúdo do livro, abordando seu tema principal,
-                sinopse e outros aspectos relevantes.
-              </p>
-              <div className={styles.inputGroup}>
-                <textarea className={styles.inputDescription}></textarea>
-              </div>
-            </div>
+              <div className={styles.bookRegistrationTwo}>
+                <div>
+                  <h2 className={styles.sectionTitle}>Descrição</h2>
+                  <p>
+                    Forneça um resumo conciso do conteúdo do livro, abordando seu tema principal,
+                    sinopse e outros aspectos relevantes.
+                  </p>
+                  <div className={styles.inputGroup}>
+                    <textarea className={styles.inputDescription}></textarea>
+                  </div>
+                </div>
 
-            <div>
-              <div className={styles.artTwo}>
-                <img src={ArtTwo} className={styles.artImage} alt="Imagem do Livro" />
+                <div>
+                  <div className={styles.artTwo}>
+                    <img src={ArtTwo} className={styles.artImage} alt="Imagem do Livro" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div className={styles.registerButton}>
-            <Button>Cadastrar</Button>
-          </div>
-        </div>
-      </div>
+              <div className={styles.registerButton}>
+                <Button>Cadastrar</Button>
+              </div>
+        </div> {/*final section two */}
+
+        </div>{/*final right section */}
+
+      </div> {/* final content page */}
 
       <div>
         <Footer />
       </div>
+
     </>
   );
 };

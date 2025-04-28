@@ -1,6 +1,12 @@
 .contentPage {
   background-color: #e9e9e9;
+  display: flex;
+}
+
+.rightSection{
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .sectionTitle {
@@ -12,7 +18,7 @@
 }
 
 .linksNavigationBox {
-  height: 29px;
+  height: 40px;
   width: auto;
   display: flex;
   align-items: center;
@@ -44,8 +50,7 @@
 .artImage {
   width: 100%;
   max-width: 240px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
   margin-left: 0;
 }
 
@@ -98,17 +103,6 @@
 .rowGroup .inputLanguage{
   width: auto;
 }
-
-/*.inputGender{
-  min-height: 100px;
-  padding: 12px;
-  resize: vertical;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  resize:none
-}*/
 
 .sectionTitleColumnThree{
   visibility: hidden;
