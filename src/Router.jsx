@@ -5,6 +5,7 @@ import { Login } from './pages/Login';
 import { Cadastrar } from './pages/Cadastrar';
 import { Teste } from './pages/Teste';
 import { Inicio } from './pages/Início';
+import { DetailedView } from './pages/DetailedView';
 
 export const Router = () =>{
     return(
@@ -15,6 +16,7 @@ export const Router = () =>{
             <Route path='/cadastrar' element={<Cadastrar/>}/>
             <Route path='/inicio' element={<Inicio/>}/>
             <Route path='/teste' element={<Teste/>}/>
+            <Route path='/explorar/detailedView' element={<DetailedView/>}/>
         </Routes>
     )
 }
