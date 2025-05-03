@@ -18,12 +18,6 @@ export const Menu = () => {
           </span>
           Explorar
         </div>
-        <div className={styles.registerBox}>
-          <span>
-            <ChartPieSlice size={32} className={styles.menuIcon} />
-          </span>
-          Administração
-        </div>
     </div>
     </>
   )
