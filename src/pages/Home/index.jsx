@@ -3,6 +3,7 @@ import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
 import { Menu } from "../../components/Menu/Menu";
 import { CardBook } from "../../components/CardBook/CardBook";
+import { Link } from "react-router-dom";
 
 //Teste (DEVE SER APAGADO DEPOIS)
 import Test from '../../assets/Book Cover Group.png'
@@ -44,7 +45,9 @@ export const Home = () => {
           <div className={styles.sectionTitle}>Novidades</div>
           <div className={styles.sectionShowCase}>
                 {books.map(book => (
-                    <CardBook image={Test} title="Jogos Vorazes" author="Suzanne Collins"/>
+                    <Link to="/explorar/detailedView">
+                      <CardBook image={Test} title="Jogos Vorazes" author="Suzanne Collins"/>
+                    </Link>
                 ))}
           </div>
 
