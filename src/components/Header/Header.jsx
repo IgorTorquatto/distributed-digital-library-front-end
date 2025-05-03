@@ -6,6 +6,8 @@ import UserImage from "../../assets/Mask group.png";
 import { ShoppingCart } from "phosphor-react";
 import { useState } from "react";
 import LogoFocused from "../../assets/Nubi Focused.png";
+import { Link } from 'react-router-dom';
+
 
 export const Header = ( { showSearch = false }) => {
 
@@ -16,7 +18,9 @@ export const Header = ( { showSearch = false }) => {
       <div className={styles.header}>
 
         <div className={styles.boxLogo}>
-          <img src={searchFocused ? LogoFocused : Logo} className={`${styles.imgLogo} ${styles.logoTransition}`}></img>
+          <Link to="/home">
+            <img src={searchFocused ? LogoFocused : Logo} className={`${styles.imgLogo} ${styles.logoTransition}`}></img>
+          </Link>
         </div>
 
         {showSearch ? (
