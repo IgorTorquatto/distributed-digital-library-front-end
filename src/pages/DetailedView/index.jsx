@@ -9,6 +9,7 @@ import { StatisticsBook } from '../../components/StatisticsBook/StatisticsBook'
 
 //Teste
 import BookImage from '../../assets/Books.png'
+import UserPhoto from '../../assets/People.png'
 
 export const DetailedView = () => {
   return (
@@ -98,7 +99,51 @@ export const DetailedView = () => {
             </div>
 
             <div className={`${styles.section} ${styles.sectionThree}`}>
-                 teste
+                <div className={styles.sectionThreeTitle}>
+                    <p>Resenhas no <span>NUBI</span></p>
+                </div>
+
+                <div className={styles.commentBox}>
+
+                    <div className={styles.userBox}>
+
+                        <div>
+                            <img src={UserPhoto} className={styles.userPhoto}></img>
+                        </div>
+
+                        <div className={styles.userDescription}>
+                            <p className={styles.userName}>Maluv_u</p>
+                            {/*<p> stars </p> */}
+                            
+                        </div>
+
+                        <div className={styles.commentHour}>
+                            <p>há 7 horas</p>
+                        </div>
+
+                    </div>
+
+                    <div className={styles.userComment}>
+                        <p>Jogos Vorazes é um livro que tenho lido desde a minha infância. Já li toda a trilogia, e sei os filmes decorados lol.</p>
+                    </div>
+                    
+            
+                </div>
+
+                <div className={styles.totalReviews}>
+                    <div className={styles.totalNumber}>
+                        <p>13.556 resenhas totais</p>
+                    </div> 
+                    <div className={styles.totalArrow}>
+                        <p>Ver Todas
+                            <span>
+                            <CaretRight size={28} weight="bold" color="#5885c8" />
+                            </span>
+                        </p>
+                    </div>
+                    
+                </div>
+                 
             </div>
 
         </div>

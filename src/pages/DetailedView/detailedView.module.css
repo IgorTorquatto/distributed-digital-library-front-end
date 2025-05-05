@@ -148,3 +148,88 @@
 .synopsis span{
   font-weight: bold;
 }
+
+.sectionThree{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.sectionThreeTitle{
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.sectionThree span{
+  color: #5885c8;
+}
+
+.commentBox{
+  background-color: #E4EFFF;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.userBox{
+  display: flex;
+  gap: 20px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  width: 80%;
+  border: 1px solid #5885c8;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.userPhoto{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.userName{
+  color: #5885c8;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.commentHour{
+  color: #626262;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.userComment{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.totalReviews{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.totalNumber{
+  color: #626262;
+}
+
+.totalArrow{
+  color: #5885c8;
+  font-weight: bold;
+}
