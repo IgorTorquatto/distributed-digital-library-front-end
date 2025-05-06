@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styles from "./Menu.module.css"
 import { Books, Binoculars, ChartPieSlice } from "phosphor-react";
+import { Link } from 'react-router-dom';
 
 export const Menu = () => {
   const [showGenres, setShowGenres] = useState(false);
@@ -21,10 +22,12 @@ export const Menu = () => {
           Todos os gêneros
         </div>
         <div className={styles.exploreBox}>
-          <span>
-            <Binoculars size={32} className={styles.menuIcon} />
-          </span>
-          Explorar
+          <Link to="/home/explorar">
+            <span>
+              <Binoculars size={32} className={styles.menuIcon} />
+            </span>
+            Explorar
+          </Link>
         </div>
     </div>
 

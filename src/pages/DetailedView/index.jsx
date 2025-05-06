@@ -28,8 +28,14 @@ export const DetailedView = () => {
                 <span>
                     <CaretRight size={28} weight="bold" color="#848484" />
                 </span>
-                <Link to="/explorar" className={styles.linksNavigation}>
+                <Link to="/home/explorar" className={styles.linksNavigation}>
                     Explorar
+                </Link>
+                <span>
+                    <CaretRight size={28} weight="bold" color="#848484" />
+                </span>
+                <Link to="/home/explorar/detalhes" className={styles.linksNavigation}>
+                    Detalhes
                 </Link>
             </div>
 
