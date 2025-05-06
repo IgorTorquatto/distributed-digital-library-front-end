@@ -45,8 +45,8 @@ export const Home = () => {
           <div className={styles.sectionTitle}>Novidades</div>
           <div className={styles.sectionShowCase}>
                 {books.map(book => (
-                    <Link to="/explorar/detailedView">
-                      <CardBook image={Test} title="Jogos Vorazes" author="Suzanne Collins"/>
+                    <Link to="/home/explorar/detalhes">
+                      <CardBook image={Test} title="Jogos Vorazes" author="Suzanne Collins" showRightLine={true}/>
                     </Link>
                 ))}
           </div>
@@ -58,7 +58,7 @@ export const Home = () => {
           <div className={styles.sectionTitle}>Destaques</div>
           <div className={styles.sectionShowCase}>
                 {booksTwo.map(book => (
-                      <CardBook image={Test2} title="Harry Potter e a Pedra Filosofal" author="J.K. Rowling"/>
+                      <CardBook image={Test2} title="Harry Potter e a Pedra Filosofal" author="J.K. Rowling" showRightLine={true}/>
                 ))}
           </div>
 
@@ -69,7 +69,7 @@ export const Home = () => {
           <div className={styles.sectionTitle}>Populares</div>
           <div className={styles.sectionShowCase}>
                 {booksThree.map(book => (
-                      <CardBook image={Test3} title="Anne de Green Gables" author="L. M. Montgomery"/>
+                      <CardBook image={Test3} title="Anne de Green Gables" author="L. M. Montgomery" showRightLine={true}/>
                 ))}
           </div>
 
