@@ -19,6 +19,10 @@
   margin-left: 30px;
 }
 
+.genresBox:hover{
+  cursor: pointer;
+}
+
 .menuIcon {
   margin-right: 10px;
   margin-left: 10px;
@@ -36,6 +40,10 @@
   font-weight: bold;
 }
 
+.exploreBox:hover{
+  cursor: pointer;
+}
+
 .registerBox {
   color: #ffffff;
   border-left: 1px solid #ffffff;
@@ -48,3 +56,43 @@
   font-weight: bold;
   margin-left: auto;
 }
+
+.genresDropdown {
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 190px; /* altura da barra de menu */
+  left: 15px; /* alinha com a margin-left da .genresBox */
+  width: 500px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.genresDropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.genresDropdown li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.genresDropdown li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Overlay escuro */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
