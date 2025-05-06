@@ -162,6 +162,14 @@
   font-size: 22px;
 }
 
+.nubiLogo{
+  margin: 0;
+  position: absolute;
+  transform: scaleX(-1);
+  right: 20px;
+  top: 0px;
+}
+
 .sectionThree span{
   color: #5885c8;
 }

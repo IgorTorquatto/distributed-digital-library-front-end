@@ -20,7 +20,7 @@ export const Inicio = () => {
                 <div className={styles.rightSection}>
 
                     <div className={styles.linksNavigationBox}>
-                        <Link to="/inicio" className={styles.linksNavigation}>
+                        <Link to="/gestao/home" className={styles.linksNavigation}>
                             Home
                         </Link>
                     </div>

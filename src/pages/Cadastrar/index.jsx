@@ -79,19 +79,19 @@ export const Cadastrar = () => {
         <div className={styles.rightSection}> 
 
             <div className={styles.linksNavigationBox}>
-              <Link to="/inicio" className={styles.linksNavigation}>
+              <Link to="/gestao/home" className={styles.linksNavigation}>
                 Home
               </Link>
               <span>
                 <CaretRight size={28} weight="bold" color="#848484" />
               </span>
-              <Link to="/home" className={styles.linksNavigation}>
+              <Link to="/gestao/home" className={styles.linksNavigation}>
                 Livros
               </Link>
               <span>
                 <CaretRight size={28} weight="bold" color="#848484" />
               </span>
-              <Link to="/cadastrar" className={styles.linksNavigation}>
+              <Link to="/gestao/livros/cadastrar" className={styles.linksNavigation}>
                 Cadastrar
               </Link>
             </div>

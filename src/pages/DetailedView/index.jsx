@@ -10,6 +10,7 @@ import { StatisticsBook } from '../../components/StatisticsBook/StatisticsBook'
 //Teste
 import BookImage from '../../assets/Books.png'
 import UserPhoto from '../../assets/People.png'
+import Nubi from '../../assets/Nubi.png'
 
 export const DetailedView = () => {
   return (
@@ -101,6 +102,7 @@ export const DetailedView = () => {
             <div className={`${styles.section} ${styles.sectionThree}`}>
                 <div className={styles.sectionThreeTitle}>
                     <p>Resenhas no <span>NUBI</span></p>
+                    <img src={Nubi} className={styles.nubiLogo}></img>
                 </div>
 
                 <div className={styles.commentBox}>
