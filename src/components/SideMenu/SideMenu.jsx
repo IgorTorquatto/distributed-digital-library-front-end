@@ -1,14 +1,17 @@
 import React from 'react'
 import styles from "./SideMenu.module.css"
 import { House,Books,Kanban,Share,Users,SignOut } from "phosphor-react";
+import { Link } from 'react-router-dom';
 
 export const SideMenu = () => {
   return (
     <>
     <div className={styles.sideMenu}>
         <div className={styles.sideMenuItem}>
-            <House size={32} />
-            Início
+            <Link to="/gestao/home">
+                <House size={32} />
+                Início
+            </Link>
         </div>
         <hr className={styles.sideMenuLine}></hr>
         <div className={styles.sideMenuSubTitle}>APLICAÇÃO</div>
