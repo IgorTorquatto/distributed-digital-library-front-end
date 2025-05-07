@@ -41,9 +41,9 @@ export const Home = () => {
                 {livros.map(livro => (
                     <Link
                       key={livro.id} 
-                      to={{pathname:"/explorar/detailedView", search: `?id=${livro.id}`}}
+                      to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
                     >
-                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor}/>
+                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
                     </Link>
                 ))}
           </div>
@@ -54,13 +54,8 @@ export const Home = () => {
 
           <div className={styles.sectionTitle}>Destaques</div>
           <div className={styles.sectionShowCase}>
-          {livros.map(livro => (
-                    <Link
-                      key={livro.id} 
-                      to={{pathname:"/explorar/detailedView", search: `?id=${livro.id}`}}
-                    >
-                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor}/>
-                    </Link>
+                {booksTwo.map(book => (
+                      <CardBook image={Test2} title="Harry Potter e a Pedra Filosofal" author="J.K. Rowling"/>
                 ))}
           </div>
 
@@ -70,13 +65,8 @@ export const Home = () => {
 
           <div className={styles.sectionTitle}>Populares</div>
           <div className={styles.sectionShowCase}>
-          {livros.map(livro => (
-                    <Link
-                      key={livro.id} 
-                      to={{pathname:"/explorar/detailedView", search: `?id=${livro.id}`}}
-                    >
-                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor}/>
-                    </Link>
+                {booksThree.map(book => (
+                      <CardBook image={Test3} title="Anne de Green Gables" author="L. M. Montgomery"/>
                 ))}
           </div>
 
