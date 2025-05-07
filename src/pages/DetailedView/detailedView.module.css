@@ -221,7 +221,7 @@
 }
 
 .userComment{
-  width: 80%;
+  width: 800px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -240,4 +240,8 @@
 .totalArrow{
   color: #5885c8;
   font-weight: bold;
+}
+
+.bookImage{
+  margin-right: 30px;
 }

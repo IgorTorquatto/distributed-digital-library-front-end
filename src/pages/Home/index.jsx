@@ -16,7 +16,7 @@ export const Home = () => {
   const [livros, setLivros] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/books')
+    axios.get('https://distributed-digital-library-back.onrender.com/books') //http://localhost:8000/books
       .then(response => {
         setLivros(response.data); // armazena os livros
         console.log("Livros carregados:", response.data);

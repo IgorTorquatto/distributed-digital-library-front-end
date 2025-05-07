@@ -21,7 +21,7 @@ export const DetailedView = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`http://localhost:8000/books/${id}`)
+        .get(`https://distributed-digital-library-back.onrender.com/books/${id}`)
         .then((response) => {
           setLivro(response.data);
         })
@@ -67,7 +67,7 @@ export const DetailedView = () => {
 
         <div className={`${styles.section} ${styles.sectionOne}`}>
           <div className={styles.columnOne}>
-            <img src={livro.cover_image?.data} alt="Capa do livro" />
+            <img src={livro.cover_image?.data} alt="Capa do livro" className={styles.bookImage} />
           </div>
 
           <div className={styles.columnTwo}>
@@ -138,7 +138,7 @@ export const DetailedView = () => {
 
             <div className={styles.userComment}>
               <p>
-                Jogos Vorazes é um livro que tenho lido desde a minha infância.
+                Esse é um livro que tenho lido desde a minha infância.
                 Já li toda a trilogia, e sei os filmes decorados lol.
               </p>
             </div>

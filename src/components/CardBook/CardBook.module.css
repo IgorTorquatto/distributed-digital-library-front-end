@@ -36,3 +36,8 @@
 .card:hover{
     cursor: pointer;
 }
+
+.cardImage{
+  width: 200px;
+  height: 250px;
+}
