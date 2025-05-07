@@ -9,7 +9,35 @@ import { Footer } from "../../components/Footer/Footer";
 import { Upload } from "phosphor-react";
 import { Header } from "../../components/Header/Header";
 
+//Validaçãodo formulário
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+
 import { useState } from 'react';
+
+
+const schema = yup.object().shape({
+  titulo: yup.string().required('O título é obrigatório'),
+  autor: yup.string().required('O autor é obrigatório'),
+  paginas: yup
+    .number()
+    .typeError('Deve ser um número')
+    .positive('Deve ser positivo')
+    .integer('Deve ser um número inteiro')
+    .required('Número de páginas é obrigatório'),
+  idioma: yup.string().required('O idioma é obrigatório'),
+  editora: yup.string().required('A editora é obrigatória'),
+  publicadoEm: yup
+    .number()
+    .typeError('Ano inválido')
+    .min(1000, 'Ano inválido')
+    .max(new Date().getFullYear(), 'Ano inválido')
+    .required('O ano de publicação é obrigatório'),
+  descricao: yup.string().required('A descrição é obrigatória'),
+});
+
 
 const predefinedGenres = [
   'Drama',
@@ -27,6 +55,15 @@ export const Cadastrar = () => {
   const [tags, setTags] = useState([]); // Para armazenar os gêneros selecionados
   const [inputValue, setInputValue] = useState(''); // Para armazenar o valor do campo de entrada
   const [filteredGenres, setFilteredGenres] = useState(predefinedGenres); // Gêneros filtrados para sugestões
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    resolver: yupResolver(schema)
+  });
+  
 
   // Função para adicionar uma tag
   const addTag = (tag) => {
@@ -68,6 +105,10 @@ export const Cadastrar = () => {
     }
   };
 
+  const onSubmit = (data) => {
+    console.log("Dados validados:", data, tags);
+  };
+
   return (
     <>
       <Header showSearch={false} />
@@ -105,30 +146,36 @@ export const Cadastrar = () => {
             <div className={styles.inputsContainer}>
               <div className={styles.inputGroup}>
                 <label>Título</label>
-                <input type="text" />
+                <input type="text"  {...register('titulo')}/>
+                {errors.titulo && <p className={styles.error}>{errors.titulo.message}</p>}
               </div>
               <div className={styles.inputGroup}>
                 <label>Autor</label>
-                <input type="text" />
+                <input type="text" {...register('autor')}/>
+                {errors.autor && <p className={styles.error}>{errors.autor.message}</p>}
               </div>
               <div className={styles.rowGroup}>
                 <div className={styles.inputGroup}>
                   <label>Páginas</label>
-                  <input type="number" className={styles.inputPages} min="0" />
+                  <input type="number" className={styles.inputPages} min="0" {...register('paginas')} />
+                  {errors.paginas && <p className={styles.error}>{errors.paginas.message}</p>}
                 </div>
                 <div className={styles.inputGroup}>
                   <label>Idioma</label>
-                  <input type="text" className={styles.inputLanguage} />
+                  <input type="text" className={styles.inputLanguage} {...register('idioma')}/>
+                  {errors.idioma && <p className={styles.error}>{errors.idioma.message}</p>}
                 </div>
               </div>
               <div className={styles.rowGroup}>
                 <div className={styles.inputGroup}>
                   <label>Editora</label>
-                  <input type="text" />
+                  <input type="text" {...register('editora')}/>
+                  {errors.editora && <p className={styles.error}>{errors.editora.message}</p>}
                 </div>
                 <div className={styles.inputGroup}>
                 <label>Publicado em</label>
-                <input type="number" className={styles.inputPages} />
+                <input type="number" className={styles.inputPages} {...register('publicadoEm')}/>
+                {errors.publicadoEm && <p className={styles.error}>{errors.publicadoEm.message}</p>}
               </div>
                 
               </div>
@@ -208,7 +255,7 @@ export const Cadastrar = () => {
               </div>
 
               <div className={styles.registerButton}>
-                <Button>Cadastrar</Button>
+                <Button type="submit" onClick={handleSubmit(onSubmit)}>Cadastrar</Button>
               </div>
         </div> {/*final section two */}
 
