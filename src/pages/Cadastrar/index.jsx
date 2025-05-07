@@ -10,6 +10,8 @@ import { Upload } from "phosphor-react";
 import { Header } from "../../components/Header/Header";
 
 import { useState } from 'react';
+import axios from 'axios';
+
 
 const predefinedGenres = [
   'Drama',
@@ -59,6 +61,17 @@ export const Cadastrar = () => {
       }
     }
   };
+
+  const handleCadastrar = () => {
+    axios.defaults.headers.get['Access-Control-Allow-Origin'] = "*"
+    axios.get('http://localhost:8000/books')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
 
   const handleBlur = () => {
     const genre = inputValue.trim();
@@ -208,7 +221,7 @@ export const Cadastrar = () => {
               </div>
 
               <div className={styles.registerButton}>
-                <Button>Cadastrar</Button>
+                <Button onClick={handleCadastrar}>Cadastrar</Button>
               </div>
         </div> {/*final section two */}
 
