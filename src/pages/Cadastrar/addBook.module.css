@@ -40,11 +40,8 @@
   margin: 20px;
   border: 1px solid #d9d9d9;
   padding: 20px;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
-  gap: 20px; /* espaço entre colunas */
-  align-items: center;
+  display: flex;
+  gap:20px;
 }
 
 .artImage {
@@ -54,13 +51,22 @@
   margin-left: 0;
 }
 
+.columnTwo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
 .columnOne,
-.columnTwo,
 .columnThree {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   height: 100%;
+}
+
+.columnThree{
+  margin-top: 60px;
 }
 
 .inputsContainer {
@@ -254,4 +260,24 @@
   color: red;
   font-size: 0.8rem;
   margin-top: 0.2rem;
+}
+
+.registerButton{
+  margin-top: 60px;
+  margin-left: 80px;
+}
+
+.sinopse{
+  padding: 12px;
+  resize: vertical;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize:none;
+  height: 200px;
+}
+
+.hiddenInput {
+  display: none;
 }
