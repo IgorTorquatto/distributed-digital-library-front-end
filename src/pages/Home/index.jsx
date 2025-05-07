@@ -4,34 +4,28 @@ import { Footer } from "../../components/Footer/Footer";
 import { Menu } from "../../components/Menu/Menu";
 import { CardBook } from "../../components/CardBook/CardBook";
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
+import { useEffect, useState } from "react";
 //Teste (DEVE SER APAGADO DEPOIS)
 import Test from '../../assets/Book Cover Group.png'
 import Test2 from '../../assets/Book Cover Group(2).png'
 import Test3 from '../../assets/Book Cover Group(3).png'
 
-const books = Array.from({ length: 10 }, (_, index) => ({
-  id: index,
-  image: Test,
-  title: `Jogos Vorazes ${index + 1}`,
-  author: 'Suzanne Collins',
-}));
-
-const booksTwo = Array.from({ length: 10 }, (_, index) => ({
-  id: index,
-  image: Test2,
-  title: `Harry Potter ${index + 1}`,
-  author: 'J.K. Rowling',
-}));
-
-const booksThree = Array.from({ length: 10 }, (_, index) => ({
-  id: index,
-  image: Test3,
-  title: `Anne de Green Gables ${index + 1}`,
-  author: 'L. M. Montgomery',
-}));
-
 export const Home = () => {
+
+  const [livros, setLivros] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/books')
+      .then(response => {
+        setLivros(response.data); // armazena os livros
+        console.log("Livros carregados:", response.data);
+      })
+      .catch(error => {
+        console.error("Erro ao buscar livros:", error);
+      });
+  }, []);
+  
   return (
     <>
       <Header showSearch={true} />
@@ -44,9 +38,12 @@ export const Home = () => {
 
           <div className={styles.sectionTitle}>Novidades</div>
           <div className={styles.sectionShowCase}>
-                {books.map(book => (
-                    <Link to="/home/explorar/detalhes">
-                      <CardBook image={Test} title="Jogos Vorazes" author="Suzanne Collins" showRightLine={true}/>
+                {livros.map(livro => (
+                    <Link
+                      key={livro.id} 
+                      to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
+                    >
+                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
                     </Link>
                 ))}
           </div>
@@ -57,8 +54,13 @@ export const Home = () => {
 
           <div className={styles.sectionTitle}>Destaques</div>
           <div className={styles.sectionShowCase}>
-                {booksTwo.map(book => (
-                      <CardBook image={Test2} title="Harry Potter e a Pedra Filosofal" author="J.K. Rowling" showRightLine={true}/>
+          {livros.map(livro => (
+                    <Link
+                      key={livro.id} 
+                      to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
+                    >
+                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
+                    </Link>
                 ))}
           </div>
 
@@ -68,8 +70,13 @@ export const Home = () => {
 
           <div className={styles.sectionTitle}>Populares</div>
           <div className={styles.sectionShowCase}>
-                {booksThree.map(book => (
-                      <CardBook image={Test3} title="Anne de Green Gables" author="L. M. Montgomery" showRightLine={true}/>
+          {livros.map(livro => (
+                    <Link
+                      key={livro.id} 
+                      to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
+                    >
+                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
+                    </Link>
                 ))}
           </div>
 

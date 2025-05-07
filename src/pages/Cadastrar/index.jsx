@@ -16,6 +16,8 @@ import * as yup from 'yup';
 
 
 import { useState } from 'react';
+import axios from 'axios';
+
 
 
 const schema = yup.object().shape({
@@ -96,6 +98,17 @@ export const Cadastrar = () => {
       }
     }
   };
+
+  const handleCadastrar = () => {
+    axios.defaults.headers.get['Access-Control-Allow-Origin'] = "*"
+    axios.get('http://localhost:8000/books')
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
 
   const handleBlur = () => {
     const genre = inputValue.trim();
@@ -255,7 +268,9 @@ export const Cadastrar = () => {
               </div>
 
               <div className={styles.registerButton}>
+
                 <Button type="submit" onClick={handleSubmit(onSubmit)}>Cadastrar</Button>
+
               </div>
         </div> {/*final section two */}
 
