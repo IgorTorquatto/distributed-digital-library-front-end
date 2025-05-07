@@ -12,13 +12,14 @@ export const Router = () =>{
     return(
         <Routes>
             <Route path='/' element={<Login/>}/>
-            <Route path='/home' element={<Home/>}/>
             <Route path='/register' element={<Register/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/home/explorar/detalhes' element={<DetailedView/>}/>
+            <Route path='/home/explorar' element={<Explorar/>}/>
+            <Route path='/gestao' element={<Inicio/>}/>
             <Route path='/gestao/livros/cadastrar' element={<Cadastrar/>}/>
             <Route path='/gestao/home' element={<Inicio/>}/>
             <Route path='/teste' element={<Teste/>}/>
-            <Route path='/home/explorar/detalhes' element={<DetailedView/>}/>
-            <Route path='/home/explorar' element={<Explorar/>}/>
         </Routes>
     )
 }
