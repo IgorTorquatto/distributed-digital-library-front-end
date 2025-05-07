@@ -16,7 +16,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 // Schema de validação com Yup
@@ -71,6 +71,10 @@ export const Cadastrar = () => {
 
   const [coverImage, setCoverImage] = useState(null);
 
+  useEffect( ()=> {
+    console.log(coverImage)
+  }, [coverImage])
+
   const handleCoverImageChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -81,6 +85,7 @@ export const Cadastrar = () => {
           content_type: file.type,
           data: reader.result.split(",")[1], // Convertendo para base64
         });
+        
         // Atualiza o valor do arquivo na forma para ser validado pelo Yup
         setValue("coverImage", {
           filename: file.name,
