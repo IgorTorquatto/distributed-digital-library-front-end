@@ -1,3 +1,102 @@
-.titulo{
-    color: blue;
+.Logincontainer{
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.LoginLeft{
+    flex: 1;
+    background-color: #5885C8;
+    background-image: url('../../assets/backGround.png');
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.NubiLoginImg{
+    width: 580px;
+    height: 480px;
+    margin-bottom: 20px;
+}
+
+.loginRight{
+    flex: 1;
+    background-color: #F2F2F2;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.NubiLogoImg{
+    width: 200px;
+    position: absolute;
+    top: 0%;
+    right: 40px;
+    
+}
+
+.loginRight h2 {
+    font-size: 40px;
+    color: #1E1E1E;
+    margin-bottom: 10px;
+    margin-top: 127px;
+}
+
+.loginRight p{
+    font-size: 14px;
+    color:#464646;
+    margin-bottom: 30px;
+    
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formScrollable{
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.loginForm input{
+    width: 419px;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #464646;
+    border-radius: 6px;
+    background-color: #F2F2F2;
+}
+
+.link{
+    width: 90px;
+    font-size: 15px;
+    color: #2563eb;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button{
+    width: 300px;
+    padding: 8px;
+    background-color: #5885C8;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.terms{
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;  
 }
