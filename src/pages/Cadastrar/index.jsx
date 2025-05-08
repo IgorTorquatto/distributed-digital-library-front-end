@@ -16,7 +16,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 // Schema de validação com Yup
@@ -70,6 +70,7 @@ export const Cadastrar = () => {
   });
 
   const [coverImage, setCoverImage] = useState(null);
+  const [imageSuccess, setimageSuccess] = useState("");
 
   const handleCoverImageChange = (event) => {
     const file = event.target.files[0];
@@ -81,6 +82,7 @@ export const Cadastrar = () => {
           content_type: file.type,
           data: reader.result.split(",")[1], // Convertendo para base64
         });
+        setimageSuccess("Imagem carregada!")
         // Atualiza o valor do arquivo na forma para ser validado pelo Yup
         setValue("coverImage", {
           filename: file.name,
@@ -98,6 +100,7 @@ export const Cadastrar = () => {
   };
 
   const onSubmit = async (data) => {
+    setimageSuccess("")
     const bookData = {
       ...data,
       cover_image: coverImage,
@@ -231,13 +234,14 @@ export const Cadastrar = () => {
                     </div>
                     <div className={styles.inputGroup}>
                       <label>Capa</label>
+                      <span style={{color: "green", fontWeight: "bold"}}>{imageSuccess}</span>
                       <div
                         className={styles.uploadButton}
                         onClick={() =>
                           document.getElementById("coverInput").click()
                         }
                       >
-                        Escolher arquivo
+                        Escolher arquivo        
                         <span>
                     <Upload size={32} />
                   </span>

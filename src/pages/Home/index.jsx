@@ -43,7 +43,7 @@ export const Home = () => {
                       key={livro.id} 
                       to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
                     >
-                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
+                      <CardBook image={`data:${livro.cover_image.content_type};base64,${livro.cover_image.data}`} title={livro.titulo} author={livro.autor} showRightLine={true}/>
                     </Link>
                 ))}
           </div>
@@ -59,7 +59,7 @@ export const Home = () => {
                       key={livro.id} 
                       to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
                     >
-                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
+                      <CardBook image={`data:${livro.cover_image.content_type};base64,${livro.cover_image.data}`} title={livro.titulo} author={livro.autor} showRightLine={true}/>
                     </Link>
                 ))}
           </div>
@@ -75,7 +75,7 @@ export const Home = () => {
                       key={livro.id} 
                       to={{pathname:"/home/explorar/detalhes", search: `?id=${livro.id}`}}
                     >
-                      <CardBook image={livro.cover_image.data} title={livro.titulo} author={livro.autor} showRightLine={true}/>
+                      <CardBook image={`data:${livro.cover_image.content_type};base64,${livro.cover_image.data}`} title={livro.titulo} author={livro.autor} showRightLine={true}/>
                     </Link>
                 ))}
           </div>

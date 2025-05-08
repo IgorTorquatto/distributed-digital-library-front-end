@@ -67,7 +67,7 @@ export const DetailedView = () => {
 
         <div className={`${styles.section} ${styles.sectionOne}`}>
           <div className={styles.columnOne}>
-            <img src={livro.cover_image?.data} alt="Capa do livro" className={styles.bookImage} />
+            <img src={`data:${livro.cover_image.content_type};base64,${livro.cover_image.data}`} alt="Capa do livro" className={styles.bookImage} />
           </div>
 
           <div className={styles.columnTwo}>
