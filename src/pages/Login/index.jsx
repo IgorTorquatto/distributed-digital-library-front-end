@@ -22,7 +22,7 @@ export const Login = () => {
           <input type="email" placeholder="Digite seu endereço de e-mail..."/>
           <input type="password" placeholder="Digite sua senha..."/>
           <a href="/register" className={styles.registerLink}>Não tem cadastro? Crie uma conta</a>
-          <button type="submit">Entrar</button>
+          <button type="submit"> Entrar </button>
         </form>
 
       </div>
