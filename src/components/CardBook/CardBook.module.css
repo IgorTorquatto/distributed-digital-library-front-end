@@ -1,0 +1,43 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  flex-shrink: 0;
+}
+
+.bookName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bookAuthor {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.bookDetails p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.rightLine {
+  position: absolute;
+  top: 5;
+  right: 0;
+  width: 1px;
+  height: calc(80%);
+  background-color: #d9d9d9;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.cardImage{
+  width: 200px;
+  height: 250px;
+}

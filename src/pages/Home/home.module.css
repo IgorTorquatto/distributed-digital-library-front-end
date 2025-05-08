@@ -1,87 +1,44 @@
-.topBox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 120px;
+.contentPage {
+  background-color: #e9e9e9;
+  padding: 20px;
 }
 
-.imgLogo{
-    width: 210x;
-    height: 110px;
-    margin-left: 20px;
+.section {
+  margin: 20px;
 }
 
-.menu{
-    background-color: #5885C8;
-    width: 100%;
-    height: 65px;
-    display: flex;
-    flex-direction: row;
+.sectionTitle {
+  color: #464646;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.menuIcon{
-    margin-right: 10px;
-    margin-left: 10px;
+.sectionShowCase {
+  background-color: #ffffff;
+  height: 371px;
+  border-radius: 15px;
+  display: flex;
+  border: 1px solid #d9d9d9;
+  gap: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+.sectionShowCase::-webkit-scrollbar {
+  height: 8px;
 }
 
-.exploreBox{
-    color: #ffffff;
-    border-right: 1px solid #ffffff;
-    padding: 10px;
-    height: 100%;
-    width: 18%;
-    display: flex;
-    align-items: center;
-    font-size: medium;
-    font-weight: bold;
+.sectionShowCase::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
 
-.genresBox{
-    color: #ffffff;
-    border-right: 1px solid #ffffff;
-    padding: 10px;
-    height: 100%;
-    width: 18%;
-    display: flex;
-    align-items: center;
-    font-size: medium;
-    font-weight: bold;
-    margin-left: 30px;
+.sectionShowCase::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.registerBox{
-    color: #ffffff;
-    border-left: 1px solid #ffffff;
-    padding: 10px;
-    height: 100%;
-    width: 18%;
-    display: flex;
-    align-items: center;
-    font-size: medium;
-    font-weight: bold;
-    margin-left: auto;
-}
-
-.contentPage{
-    background-color: #E9E9E9;
-    padding: 20px;
-}
-
-.section{
-    margin: 20px;
-}
-
-.sectionTitle{
-    color: #464646;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.sectionShowCase{
-    background-color: #ffffff;
-    height: 371px;
-    border-radius: 15px;
-    display: flex;
-    border:  1px solid #D9D9D9;
+.sectionShowCase:last-child {
+  margin-bottom: 100px;
 }

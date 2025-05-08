@@ -1,0 +1,20 @@
+.statisticsBook{
+    width: 150px;
+    border-radius: 15px;
+    border: solid 2px #5885C8;
+    overflow: hidden;
+}
+
+.header{
+    background-color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.body{
+    background-color: #5885C8;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+}
